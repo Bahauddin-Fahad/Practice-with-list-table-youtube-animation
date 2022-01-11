@@ -43,14 +43,26 @@ th {
   margin: 0%;
 }
 .semantic {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
   text-align: center;
 }
-.semantic > ol {
-  text-align: center;
-  border: px solid rgb(52, 205, 252);
+.semantic-tag {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 400px;
+  border: 1px solid rgb(52, 205, 252);
+  border-radius: 10px;
   background-color: rgb(28, 44, 44);
 }
-.semantic > h1 {
+
+.semantic > header > h1 {
+  text-decoration: underline;
+}
+h1 {
+  text-align: center;
   text-decoration: underline;
 }
 h4 {
@@ -75,23 +87,53 @@ a {
   text-decoration: none;
 }
 .fa-facebook {
-  color: blue;
+  color: rgb(0, 60, 255);
 }
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-.photo {
-  height: 200px;
-  width: 200px;
-  margin-left: 560px;
-  position: relative;
-  overflow: hidden;
-  /* justify-content: center; */
-  text-align: center;
-  border: 5px solid rgb(52, 205, 252);
-  border-radius: 8px;
+  margin-top: 100px;
 }
-.photo img {
-  height: 200px;
-  width: 200px;
-  text-align: center;
+.photo-frame {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 5px solid rgb(52, 205, 252);
+  overflow: hidden;
+}
+.photo-content > h3 {
+  text-decoration: none;
+}
+.photo {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  height: 300px;
+  width: 300px;
+}
+.photo-content {
+  display: none;
+  text-align: center;
+  width: 100%;
+  top: 35%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+}
+.photo-frame:hover .photo-content {
+  display: block;
+  transition: 10s;
+}
+.photo-frame:hover .photo {
+  transform: scale(1.5);
+  transition: 3s transform;
 }
